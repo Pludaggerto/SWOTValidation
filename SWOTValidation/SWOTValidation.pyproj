@@ -4,13 +4,13 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>136ce808-ba41-4737-8655-376741f87c0f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>SWOTValidation.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <StartupFile>Class\Comparer.py</StartupFile>
+    <SearchPath>Class</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>SWOTValidation</Name>
     <RootNamespace>SWOTValidation</RootNamespace>
+    <InterpreterId>Global|VisualStudio|geos</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="SWOTValidation.py" />
+    <Compile Include="Class\Baser.py" />
+    <Compile Include="Class\Comparer.py" />
+    <Compile Include="Class\DataArranger.py" />
+    <Compile Include="Class\Joiner.py" />
+    <Compile Include="Class\Sampler.py" />
+    <Compile Include="Class\Assessment.py" />
+    <Compile Include="main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|arcgispro-py3-clone" />
+    <InterpreterReference Include="Global|VisualStudio|arcgispro-py3" />
+    <InterpreterReference Include="Global|VisualStudio|geos" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\" />
+    <Folder Include="Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
